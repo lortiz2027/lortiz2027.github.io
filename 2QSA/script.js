@@ -1,14 +1,16 @@
-ScrollReveal().reveal('.home_content, heading', {origin: 'top'});
-ScrollReveal().reveal('.home-img, .photos-container, .photos-box ', {origin: 'bottom'});
-ScrollReveal().reveal('.home_content h1, .about-img', {origin: 'left'});
-ScrollReveal().reveal('.home_content p, .about-content', {origin: 'right'});
-
+let navbar = document.querySelector('.navbar')
+let menu = document.querySelector('#menu')
 
 ScrollReveal({
     distance:'80px',
     duration: 2000,
     delay: 200
 });
+
+ScrollReveal().reveal('.home_content, heading', {origin: 'top'});
+ScrollReveal().reveal('.home-img, .photos-container, .photos-box ', {origin: 'bottom'});
+ScrollReveal().reveal('.home_content h1, .about-img', {origin: 'left'});
+ScrollReveal().reveal('.home_content p, .about-content', {origin: 'right'});
 
 
 window.onscroll = () => { 
@@ -18,7 +20,7 @@ window.onscroll = () => {
      let height = sec.offsetHeight;
      let id = sec.getAttribute('id');
     
-    if(top >= offset && top < offset + height) { 
+    if(top >= offset && top<offset + height) { 
         navLinks.forEach (links => {
             links.classList.remove('active'); 
             document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
@@ -28,15 +30,10 @@ window.onscroll = () => {
 
 
     let header = document.querySelector('header');
-
     header.classlist.toggle('sticky', window.scrollY>100)
-
     menu.classList.remove('bx-x')
     navbar.classList.remove('active')
 };
-
-let menu = document.querySelector('#menu')
-let navbar = document.querySelector('.navbar')
 
 menu.onclick=()=>{
     menu.classList.toggle('bx-x')
@@ -45,8 +42,6 @@ menu.onclick=()=>{
 
 let sections = document.querySelectorAll('section'); 
 let navLinks = document.querySelectorAll('header nav a'); 
-
-
 
 var typed = new Typed('.multiple_text', {
     strings: ['Cycling', 'Taekwondo', 'Swimming', 'Basketball', 'Badminton', 'Sepak', 'Guitar', 'Drums'],

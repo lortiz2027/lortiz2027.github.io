@@ -118,7 +118,7 @@ section{
     50%{
         transform:translateY(-2.4rem);
     }
-    110%{
+    100%{
         transform:translateY(0);
     }
 }
@@ -294,7 +294,7 @@ span{
 
 .photos_box{
     width: 100%;
-    transition: .5 ease;
+    transition: .5s ease;
 }
 
 .photos_box:hover img{
@@ -314,7 +314,7 @@ span{
     text-align: center;
     padding: 0 4rem;
     transform: translateY(100%);
-    transition: .5 ease;
+    transition: .5s ease;
 }
 .photos_box:hover  .photos_glow{
     transform: translateY(0);
@@ -418,8 +418,8 @@ span{
         margin-bottom: 3rem;
     }
 
-    .photos_container{
-        grid-template-columns: (2, 1 fr);
+    .photos_container{  
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
