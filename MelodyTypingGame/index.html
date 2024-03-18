@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap">
+<title>Melody's Typing Harmony</title>
+<style>
+  body {
+    background-image: url('background_image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Bubblegum Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+ 
+  .container {
+    background-color: rgba(255, 255, 255, 0.877);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    border: 2px solid #ff2877;
+    outline: 2px solid #ff2877;
+  }
+ 
+  .statsBox {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .timerBox, .scoreBox {
+    background-color: lightpink;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    flex: 1;
+    border: 2px solid #ff2877;
+    outline: 2px solid #ff2877;
+  }
+  #sentence {
+    color: lightpink;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  #sentence span {
+    color: lightpink;
+  }
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 300px;
+  }
+ 
+  button {
+    padding: 10px 20px;
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    color: black;
+  }
+  /* Popup styles */
+  .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  .popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Melody's Typing Harmony</h1>
+  <div class="statsBox">
+    <div class="timerBox" id="timerBox">
+      <span id="timer">Time: 60s</span>
+    </div>
+    <div class="scoreBox" id="scoreBox">
+      <span id="score">Score: 0</span>
+    </div>
+  </div>
+  <div id="sentence"></div>
+  <input type="text" id="userInput" placeholder="Type here..." disabled>
+  <button id="startBtn">Start</button>
+  <button id="resetBtn">Reset</button>
+  <button onclick="location.href='homepage.html'">Home Page</button>
+</div>
+<div class="popup" id="popup">
+  <div class="popup-content">
+    <h2>Time's Up!</h2>
+    <p>Your SCORE: <span id="Score"></span></p>
+    <button id="retryBtn">Retry</button>
+  </div>
+</div>
+
+<script>
+    const sentences = [
+    "consider hold house with also which feel eye of help this over public some man lead mean just house however first that must keep govern we without very a stand help would more around old turn",
+    "one get find over on up plan too can also through people good the point which follow large will develop much play these high right with stand move can only the however by hand only might still that",
+    "line a should however get from one show or mean set get work feel find fact have late will so also around what just now all early eye be these group from well to because as so while any seem", 
+    "can for child both or increase be change should very late mean other large so because when turn come would both keep also might head should off both eye however see late since by would get each", "what take number up under late where stand because their done person need to year as present increase high day could own of take person hold or find from lead since large mean what only from",
+    "consider in world also face in feel open other early should never interest each time like just over problem as another problem know during these hold head course never who their because back present", 
+    "leave you they think part not head by with if hand he ask tell home use to part good day plan line open they set right late keep good through begin over little last high small hand know where face with",
+    "call give school call here since on march an that head person need much late follow thing during think only would want know word one out be life a lead world not however as know each around must",
+    "between order much run could each such who then turn will think right year use eye present much tell time early be by good could change never by life begin general out want most than curse head in",
+    "school year say however face part ask system nation large real not very mean it stand thing well that then however get set back great about after done against come they but now with on if number more",
+  ];
+
+
+  let typedWords = 0;
+  let currentSentenceIndex;
+  let startTime;
+  let timerInterval;
+
+
+
+  function calculateSCORE() {
+      const elapsedTimeInMinutes = (Date.now() - startTime) / (1000 * 60);
+      const score = Math.round(typedWords / elapsedTimeInMinutes);
+      document.getElementById("score").textContent = `SCORE: ${score}`;
+      document.getElementById("Score").textContent = score;
+    }
+
+    function updateTimer() {
+    const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
+    const remainingTime = 60 - elapsedTime;
+    if (remainingTime >= 0) {
+      document.getElementById("timer").textContent = `Time: ${remainingTime}s`;
+    } else {
+      document.getElementById("timer").textContent = "Time's up!";
+      clearInterval(timerInterval);
+      document.getElementById("userInput").disabled = true;
+      showPopup();
+    }
+  }
+
+    function getRandomSentence() {
+    currentSentenceIndex = Math.floor(Math.random() * sentences.length);
+    const sentence = sentences[currentSentenceIndex];
+    const coloredSentence = sentence.split('').map(char => `<span>${char}</span>`).join('');
+    document.getElementById("sentence").innerHTML = coloredSentence;
+  }
+
+  function startTimer() {
+    startTime = Date.now();
+    timerInterval = setInterval(updateTimer, 1000);
+  }
+
+
+
+  
+  function showPopup() {
+    const popup = document.getElementById("popup");
+    popup.style.display = "block";
+    calculateSCORE();
+  }
+
+  document.getElementById("startBtn").addEventListener("click", function() {
+    typedWords = 0;
+    getRandomSentence();
+    startTimer();
+    document.getElementById("userInput").disabled = false;
+    this.disabled = true;
+  });
+
+  document.getElementById("retryBtn").addEventListener("click", function() {
+    document.getElementById("popup").style.display = "none";
+    document.getElementById("startBtn").disabled = false;
+    document.getElementById("timer").textContent = "Time: 60s";
+    document.getElementById("score").textContent = "SCORE: 0";
+    document.getElementById("userInput").value = "";
+  });
+
+  document.getElementById("userInput").addEventListener("input", function() {
+    const input = this.value;
+    const sentence = sentences[currentSentenceIndex];
+    const sentenceChars = sentence.split("");
+    const inputChars = input.split("");
+    const spans = document.querySelectorAll("#sentence span");
+
+    for (let i = 0; i < sentenceChars.length; i++) {
+      if (inputChars[i] === sentenceChars[i]) {
+        spans[i].style.color = "lightblue";
+      } else {
+        spans[i].style.color = "yellow";
+      }
+    }
+
+    if (input === sentence) {
+      typedWords += input.split(/\s+/).length;
+      getRandomSentence();
+      this.value = "";
+    }
+  });
+
+  document.getElementById("resetBtn").addEventListener("click", function() {
+    window.location.reload();
+  });
+
+</script>
+
+</body>
+</html>
