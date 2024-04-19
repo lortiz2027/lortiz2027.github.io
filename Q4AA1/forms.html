@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/tablogo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>WebDev Club Registration!</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(315deg, #B026FF, #30004B, #30004B, #30004B,#30004B, #30004B, #30004B );
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        .container p {
+            color: gray;
+            margin: 0;
+            padding: 0;
+            font-size: x-large;
+        }
+
+        .container {
+            background-color: white;
+            flex: 0.85;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+            top: 20px;
+        }
+
+        .flex-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; 
+        }
+
+
+        h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        button.btn.btn-success {
+            background-color: #6F4BF0 !important; 
+            border-color: #6F4BF0 !important; 
+            color: #fff !important; 
+        }
+
+        button.btn.btn-success:hover {
+            background-color:  #B026FF !important; 
+            border-color:  #B026FF !important; 
+            opacity: 55%;
+        }
+        button {
+            margin-top: 10px;
+
+        }
+        label.checkbox-label {
+            font-weight: normal;
+            font-size: 16px;
+        }
+        div#reasons label {
+            display: inline-block;
+        }
+        .form-group {
+            margin: 0;
+        }
+        .btn-clear {
+            background-color: #B026FF !important;
+            border-color: rgba(115, 0, 255, 0.354) !important;
+            color: #fff !important;
+            margin-left: 15px;
+        }
+        .btn-clear:hover {
+            background-color: #B026FF !important;
+            border-color:  rgba(115, 0, 255, 0.354)!important;
+        }
+
+        .container-header {
+        width: 85%; 
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 50px;
+        top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        }
+
+        img {
+            max-height: 100%;
+            max-width: 100%;
+            height: auto;
+            width: auto;
+        }
+        
+    </style>
+</head>
+<body>
+
+<div class="flex-container">
+    <div class="container-header">
+        <img src="header.png" alt="gg">
+    </div>
+
+</div>
+
+
+<div class="flex-container">
+
+    <div class="container">
+        <h2>Purple Smashers Registration</h2>
+        <form action="http://sirjm.infinityfreeapp.com/aa1receiver.php" method="GET">
+        <p>ENROLLMENT FORM</p>
+            <div class="form-group">
+                <label for="studname">Student Name:</label>
+                <input type="text" class="form-control" id="studname" name="studname" placeholder="Student name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="emailadd">Email Address:</label>
+                <input type="email" class="form-control" id="emailadd" name="emailadd" placeholder="Email address" required>
+            </div>
+
+            <div class="form-group">
+                <label>Biological Sex:</label>
+                <input type="radio" name="biosex" value="Male"> Male
+                <input type="radio" name="biosex" value="Female"> Female<br>
+            </div>
+
+            <div class="form-group">
+                <label for="gradelevel">Incoming Grade Level:</label>
+                <select id="gradelevel" name="gradelevel">
+                    <option value="" disabled selected>Select Grade Level</option> 
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="reasons">
+                <label>Reason/s for Joining:</label><br>
+                <input type="checkbox" id="reason1" name="reason[]" value="Interest">
+                <label for="reason1" class="checkbox-label">I just want friends to play with.</label><br>
+                <input type="checkbox" id="reason2" name="reason[]" value="Skill Development">
+                <label for="reason2" class="checkbox-label">I want to improve my badminton skills! </label><br>
+                <input type="checkbox" id="reason3" name="reason[]" value="Socialization">
+                <label for="reason3" class="checkbox-label">I want to compete with this club!</label>
+            </div>
+            
+            <button type="submit" class="btn btn-success" >Submit</button>
+            <button type="reset" class="btn btn-clear">Clear</button>
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

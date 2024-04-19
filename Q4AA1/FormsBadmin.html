@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> BADMINTON CLUB LOGIN FORM</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    
+    <div class="wrapper">
+        <span class="bg-animate"></span>
+        <span class="bg-animate2"></span>
+
+        <div id="loginForm" class="form-box login">
+            <h2 class="animation" style="--i:0; --j:21;">FOUNDER</h2>
+            <form action="#">
+                <div class="input-box animation" style="--i:1; --j:22;">
+                    <img src="pic1.png" alt="">
+                </div>
+                <div class="input-box animation" style="--i:2; --j:23;">
+                </div>
+                <div class="input-box animation" style="--i:2; --j:23;">
+                </div>
+                <button class="btn animation" style="--i:3; --j:24;"><a href="forms.html" class="enroll">ENROLL</a></button>
+                    <div class="logreg-link animation" style="--i:4; --j:25;">
+                        <p>Want to know more about the club?
+                        <a href="#" class="register-link">Learn more</a></p>
+                    </div>
+            </form>
+        </div>
+        <div class="info-text login">
+            <h2 class="animation" style="--i:0; --j:20;">PURPLE SMASHERS <br> CLUB!</h2>
+            <p class="animation" style="--i:1; --j:21;">Enroll now in the best badminton club in all of multiverse!</p>
+        </div>
+
+        <div class="form-box register">
+            <h2 class="animation" style="--i:17; --j:0;">Founder</h2>
+            <form action="#">
+                <div class="input-box animation" style="--i:18; --j:2;">
+                    <img src="pic2.png" alt="pic2">
+                </div>
+                    <div class="input-box animation" style="--i:19; --j:3;">
+                    </div>
+                <div class="input-box animation" style="--i:20; --j:4;">
+                </div>
+                    <button type="submit" class="btn animation" style="--i:21; --j:5;"><a href="forms.html" class="enroll2">ENROLL</a></button>
+                    <div class="logreg-link animation" style="--i:22;">
+                        <p>Convinced already?
+                        <a href="#" class="login-link">Go back</a></p>
+                    </div>
+            </form>
+        </div>
+        <div class="info-text register">
+            <h2 class="animation" style="--i:17; --j:0;">Best Club <br> Ever</h2>
+            <p class="animation" style="--i:18; --j:1;">This club won every tournament that existed in every universe. Club members are friendly and you won't feel left out.</p>
+        </div>
+    </div>
+
+    <script>
+        const wrapper = document.querySelector('.wrapper');
+        const registerLink = document.querySelector('.register-link');
+        const loginLink = document.querySelector('.login-link');
+        
+        registerLink.onclick = () => {
+            wrapper.classList.add('active');
+        }
+        
+        loginLink.onclick = () => {
+            wrapper.classList.remove('active');
+        }
+        
+        </script>
+</body>
+</html>
