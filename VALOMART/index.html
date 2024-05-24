@@ -1,0 +1,651 @@
+  <!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Valorant | Market Place </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Fredoka:wght@500&family=Montserrat:wght@100;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Caveat:wght@700&family=Fredoka:wght@500&family=Montserrat:wght@100;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Major+Mono+Display&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Major+Mono+Display&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+        <style>
+          #main {
+             transition: .5s;
+             padding: 16px;
+            background-image:url();
+            justify-content: center;
+           }
+          
+           
+           @media screen and (max-height: 450px) {
+             .sidebar {padding-top: 15px;}
+             .sidebar a {font-size: 18px;}
+           }
+
+            .a{
+                text-decoration: none;
+                color: #000000;
+            }
+            .sidebar {
+             height:100%;
+             width: 0;
+             position: fixed;
+             z-index: 1;
+             top: 0;
+             left: 0;
+             background-image: url(https://i.makeagif.com/media/9-10-2022/KGxorY.gif);
+             background-color: rgb(27, 23, 23);
+             overflow-x: hidden;
+             transition: 0.5s;
+             padding-top: 35px;
+           }
+          
+           .sidebar a {
+             padding: 8px 8px 8px 32px;
+             text-decoration: none;
+             font-size: 25px;
+             color: rgb(255, 136, 136);
+             display: block;
+             transition: 0.3s;
+           }
+          
+           .sidebar a:hover {
+            background-color: #b82c2c;
+            border: none;
+            color: rgb(244, 96, 96);
+            padding: 15px 30px;
+            font-size: 25px;
+            margin: 4px 2px;
+            transition: 0.5s;
+           }
+
+           
+          
+           .sidebar .closebtn {
+             position: absolute;
+             top: 0;
+             right: 25px;
+             font-size: 36px;
+             margin-left: 50px;
+           }
+          
+           .openbtn {
+             font-size: 27px;
+             cursor: pointer;
+             color: #37352d;
+             background-color: rgb(255, 139, 139);
+             padding: 15px 20px;
+             border: none;
+             margin-bottom:50px;
+           }
+
+           .btn{
+            color:black;
+            background-color: #fe7575;
+            border:none;
+            border-style:inset;
+            border-color: #fe7575;
+            border-width: 2.5px;
+            margin-bottom:50px;
+           }
+           .btn:hover{
+            background-color:rgb(52, 43, 43);
+            color:rgb(255, 134, 134);
+            border-color: red;
+           }
+          
+           .card-body{
+            background-image:url(valorant.gif);
+            background-size:cover;
+            background-repeat:no-repeat;
+            background-position: center;
+            background-color: #ffbbbb;
+            border:none;
+           }
+
+          .card-img-top{
+            background-color: rgb(210, 129, 129);
+            border-radius:5px;
+            padding-top:18px;
+            padding-bottom:15px;
+          }
+          .card-title{
+           text-align:center;
+           color:rgb(123, 118, 118);
+          font-family: "IBM Plex Mono", monospace;
+          font-weight: 700;
+          font-style: italic;
+}
+          .card-title:hover{
+            background-color:rgb(238, 28, 28);
+            color:#ffbbbb;
+            border-radius: 5px;
+            transition:0.5s;
+          }
+
+          .card{
+            border:none;
+            border-width: 1px;
+            margin-left:50px;
+          }
+
+          .text-center{
+            background-color:rgb(235, 87, 87);
+            font-family: "IBM Plex Mono", monospace;
+            font-weight: 600;
+            font-style: italic;
+          }
+
+          .text-center1{
+            text-align: center;
+            margin-bottom:60px;
+            font-family: "IBM Plex Mono", monospace;
+            font-weight: 500;
+            font-style: normal;
+}
+
+          .text-center:hover{
+            background-color:#211b1c;
+            color:#fe7575;
+            transition: 0.5s;
+          }
+
+          .text-center2{
+            text-align: center;
+            }
+
+            .card-body{
+              color: rgb(249, 236, 236);
+              margin-bottom:10px;
+              padding-top:20px;
+            }
+                    
+           
+          
+        </style>
+        <script>
+          var cart = [];
+        const cart2 = [];
+
+        function a1() {
+            const item = {
+                        prod_name: "Vandal | Elderflame",
+                        prod_price: parseInt(2900)
+                    }
+            cart.push(item)
+            displayCart();
+        }
+        function a2() {
+            const item = {
+                        prod_name: "R.E.S | Phantom",
+                        prod_price: parseInt(2500)
+                    }
+            cart.push(item)
+            displayCart();
+        }
+        function a3() {
+            const item = {
+                        prod_name: "Reaver | Odin",
+                        prod_price: parseInt(2700)
+                    }
+            cart.push(item)
+            displayCart();
+        }
+        function a4() {
+            const item = {
+                        prod_name: "Araxys | Bulldog",
+                        prod_price: parseInt(2600)
+                    }
+            cart.push(item)
+            displayCart();
+        }
+        function a5() {
+            const item = {
+                        prod_name: "P.T.C | Vandal",
+                        prod_price: parseInt(2800)
+                    }
+            cart.push(item)
+            displayCart();
+        }
+        function b1() {
+            const item = {
+                        prod_name: " Kuronami | Sheriff",
+                        prod_price: parseInt(2100)
+                    }
+            cart.push(item)
+            displayCart();
+        }
+
+        function b2() {
+            const item = {
+                        prod_name: "RGX 11z Pro | Frenzy",
+                        prod_price: parseInt(2200)
+                    }
+            cart.push(item)
+            displayCart();
+        }
+
+        function b3() {
+            const item = {
+                        prod_name: "R.E.S | Ghost",
+                        prod_price: parseInt(2300)
+                    }
+            cart.push(item)
+            displayCart();
+        }
+
+        function b4() {
+            const item = {
+                        prod_name: "VCT X SEN | Classic",
+                        prod_price: parseInt(2400)
+                    }
+            cart.push(item)
+            displayCart();
+        }
+
+        function b5() {
+            const item = {
+                        prod_name: "Oni | Shorty",
+                        prod_price: parseInt(2500)
+                    }
+            cart.push(item)
+            displayCart();
+        }
+
+        function c1() {
+            const item = {
+                        prod_name: "RGX 11z Pro| Operator",
+                        prod_price: parseInt(2600)
+                    }
+            cart.push(item)
+            displayCart();
+        }
+
+        function c2() {
+            const item = {
+                        prod_name: "Mystbloom| Operator",
+                        prod_price: parseInt(2700)
+                    }
+            cart.push(item)
+            displayCart();
+        }
+
+        function c3() {
+            const item = {
+                        prod_name: "Spline| Operator",
+                        prod_price: parseInt(2800)
+                    }
+            cart.push(item)
+            displayCart();
+        }
+
+        function c4() {
+            const item = {
+                        prod_name: "Neo Frontier| Marshal",
+                        prod_price: parseInt(2900)
+                    }
+            cart.push(item)
+            displayCart();
+        }
+
+        function c5() {
+            const item = {
+                        prod_name: "Glitchpop | Operator",
+                        prod_price: parseInt(3000)
+                    }
+            cart.push(item)
+            displayCart();
+        }
+        function d1() {
+            const item = {
+                        prod_name: "XERØFANG  | Melee",
+                        prod_price: parseInt(2600)
+                    }
+            cart.push(item)
+            displayCart();
+        }
+        function d2() {
+            const item = {
+                        prod_name: "Onimaru Kunitsuna| Melee",
+                        prod_price: parseInt(2700)
+                    }
+            cart.push(item)
+            displayCart();
+        }
+        function d3() {
+            const item = {
+                        prod_name: "Spline | Melee",
+                        prod_price: parseInt(2800)
+                    }
+            cart.push(item)
+            displayCart();
+        }
+        function d4() {
+            const item = {
+                        prod_name: "Kruonami no Yaiba | Melee",
+                        prod_price: parseInt(2900)
+                    }
+            cart.push(item)
+            displayCart();
+        }
+        function d5() {
+            const item = {
+                        prod_name: "Elderflame | Melee",
+                        prod_price: parseInt(3000)
+                    }
+            cart.push(item)
+            displayCart();
+        }
+        
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            displayCart();
+        }
+
+        function displayCart() {
+            var table = document.getElementById("karto");
+            table.innerHTML = "<tr><th>Item</th><th>Price</th><th>Remove</th></tr>";
+            var total = 0;
+            const totalText = document.getElementById("total");
+
+            for (var i = 0; i < cart.length; i++) {
+                var item = cart[i].prod_name;
+                var price = cart[i].prod_price;
+                var row = table.insertRow(-1);
+                var itemCell = row.insertCell(0);
+                var priceCell = row.insertCell(1);
+                var removeCell = row.insertCell(2);
+                itemCell.innerHTML = cart[i].prod_name;
+                priceCell.innerHTML = 'V.₱ ' + cart[i].prod_price;
+                removeCell.innerHTML = "<button onclick='removeItem(" + i + ")'>Remove</button>";
+
+                total += parseInt(cart[i].prod_price);
+                totalText.innerHTML = `V.₱${total}.00`;
+            }
+            if (cart.length == 0) {
+                totalText.innerHTML = `0.00`;
+            }
+
+            const cust_order = document.getElementById("cust_order");
+            cust_order.value = JSON.stringify(cart);
+
+            console.log(i);
+            console.log(cart);
+            console.log(cart.length);
+            console.log(total);
+        }
+            function openNav() {
+              document.getElementById("mySidebar").style.width = "250px";
+              document.getElementById("main").style.marginLeft = "250px";
+            }
+           
+            function closeNav() {
+              document.getElementById("mySidebar").style.width = "0";
+              document.getElementById("main").style.marginLeft= "0";
+            }
+            </script>
+    </head>
+    <body class="container-fluid">
+        <div class="row">
+        <a href="index.html" class="a text-center fs-1">VALORANT
+        <p class="text-center fs-5"><i>"A fresh variety for unpolished diamonds"</i></p></a>
+        </div>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="DevPage.html"><ul><li>About </li></ul></a>
+          </div>
+          <div id="text-center">
+            <button class="openbtn" onclick="openNav()">☰</button>
+            <div class="row mb-3">
+              <h1 class="text-center1">B L A C K M A R K E T - R I F L E S</h1>
+              <div class="card col-sm-4 me-3" style="width:340px">
+                <img class="card-img-top" src="https://static.wikia.nocookie.net/valorant/images/d/d2/Elderflame_Vandal.png/revision/latest?cb=20230711194310" alt="vandal" style="width:100%">
+                <div class="card-body">
+                  <h4 class="card-title"> ELDERFLAME | VANDAL</h4>
+                  <br>
+                  <h5 class="card-body">V.₱ 2900</h5>
+                  <a onclick="a1()" class="btn btn-primary">Add to Cart</a>
+                </div>
+              </div>
+              <div class="card col-sm-4 me-3" style="width:340px">
+                <img class="card-img-top" src="https://static.wikia.nocookie.net/valorant/images/b/b6/Radiant_Entertainment_System_Phantom.png/revision/latest?cb=20230711203152" alt="phantom" style="width:100%">
+                <div class="card-body">
+                  <h4 class="card-title">R.E.S | PHANTOM</h4>
+                  <br>
+                  <h5 class="card-body">V.₱ 2500</h5>
+                  <a onclick="a2()" class="btn btn-primary">Add to Cart</a>
+                </div>
+              </div>
+              <div class="card col-sm-4" style="width:340px">
+                <img class="card-img-top" src="https://static.wikia.nocookie.net/valorant/images/3/39/Reaver_Odin.png/revision/latest?cb=20230711203241" alt="odin" style="width:100%">
+                <div class="card-body">
+                  <h4 class="card-title">REAVER | ODIN</h4>
+                  <br>
+                  <h5 class="card-body">V.₱ 2700</h5>
+                  <a onclick="a3()" class="btn btn-primary">Add to Cart</a>
+                </div>
+              </div>
+              </div>
+              <div class="row">
+                <div class="card col-sm-4 me-3" style="width:340px">
+                  <img class="card-img-top" src="https://static.wikia.nocookie.net/valorant/images/2/24/Araxys_Bulldog.png/revision/latest?cb=20230711192336" alt="bulldog" style="width:100%">
+                  <div class="card-body">
+                    <h4 class="card-title">ARAXYS | BULLDOG</h4>
+                    <br>
+                    <h5 class="card-body">V.₱ 2600</h5>
+                    <a onclick="a4()" class="btn btn-primary">Add to Cart</a>
+                  </div>
+                </div>
+                <div class="card col-sm-4 me-3" style="width:340px">
+                  <img class="card-img-top" src="https://static.wikia.nocookie.net/valorant/images/a/a8/Prelude_to_Chaos_Vandal.png/revision/latest?cb=20230711202455" alt="vandal" style="width:100%">
+                  <div class="card-body">
+                    <h4 class="card-title">P.T.C | VANDAL</h4>
+                    <br>
+                    <h5 class="card-body">V.₱ 2800</h5>
+                    <a onclick="a5()" class="btn btn-primary">Add to Cart</a>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <h1 class="text-center1">B L A C K M A R K E T - P I S T O L S</h1>
+                  <div class="card col-sm-4 me-3" style="width:340px">
+                    <img class="card-img-top" src="https://static.wikia.nocookie.net/valorant/images/3/3c/Kuronami_Sheriff.png/revision/latest?cb=20240109154316" alt="sheriff" style="width:100%">
+                    <div class="card-body">
+                      <h4 class="card-title"> KURONAMI | SHERIFF</h4>
+                      <br>
+                      <h5 class="card-body">V.₱ 2100</h5>
+                      <a onclick="b1()" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                  </div>
+                  <div class="card col-sm-4 me-3" style="width:340px">
+                    <img class="card-img-top" src="https://static.wikia.nocookie.net/valorant/images/9/98/RGX_11z_Pro_Frenzy.png/revision/latest?cb=202307112037272" alt="frenzy" style="width:100%">
+                    <div class="card-body">
+                      <h4 class="card-title">RGX 11z Pro| FRENZY</h4>
+                      <br>
+                      <h5 class="card-body">V.₱ 2200</h5>
+                      <a onclick="b2()" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                  </div>
+                  <div class="card col-sm-4" style="width:340px">
+                    <img class="card-img-top" src="https://static.wikia.nocookie.net/valorant/images/0/05/Radiant_Entertainment_System_Ghost.png/revision/latest?cb=20230711203120" alt="ghost" style="width:100%">
+                    <div class="card-body">
+                      <h4 class="card-title">R.E.S | GHOST</h4>
+                      <br>
+                      <h5 class="card-body">V.₱ 2300</h5>
+                      <a onclick="b3()" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="row">
+                    <div class="card col-sm-4 me-3" style="width:340px">
+                      <img class="card-img-top" src="https://static.wikia.nocookie.net/valorant/images/a/a5/VCT_x_SEN_Classic.png/revision/latest?cb=20240221183145" alt="classic" style="width:100%">
+                      <div class="card-body">
+                        <h4 class="card-title">VCT X SEN | CLASSIC</h4>
+                        <br>
+                        <h5 class="card-body">V.₱ 2400</h5>
+                        <a onclick="b4()" class="btn btn-primary">Add to Cart</a>
+                      </div>
+                    </div>
+                    <div class="card col-sm-4 me-3" style="width:340px">
+                      <img class="card-img-top" src="https://static.wikia.nocookie.net/valorant/images/b/b7/Oni_Shorty.png/revision/latest?cb=20230711201957" alt="shorty" style="width:100%">
+                      <div class="card-body">
+                        <h4 class="card-title">ONI | SHORTY</h4>
+                        <br>
+                        <h5 class="card-body">V.₱ 2500</h5>
+                        <a onclick="b5()" class="btn btn-primary">Add to Cart</a>
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <h1 class="text-center1">B L A C K M A R K E T - S N I P E R S</h1>
+                      <div class="card col-sm-4 me-3" style="width:340px">
+                        <img class="card-img-top" src="https://static.wikia.nocookie.net/valorant/images/4/4c/RGX_11z_Pro_Operator.png/revision/latest?cb=20230711203800" alt="operator" style="width:100%">
+                        <div class="card-body">
+                          <h4 class="card-title"> RGX 11z Pro | OPERATOR</h4>
+                          <br>
+                          <h5 class="card-body">V.₱ 2600</h5>
+                          <a onclick="c1()" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                      </div>
+                      <div class="card col-sm-4 me-3" style="width:340px">
+                        <img class="card-img-top" src="https://static.wikia.nocookie.net/valorant/images/f/f9/Mystbloom_Operator.png/revision/latest?cb=20240430173707" alt="operator" style="width:100%">
+                        <div class="card-body">
+                          <h4 class="card-title">MYSTBLOOM | OPERATOR</h4>
+                          <br>
+                          <h5 class="card-body">V.₱ 2700</h5>
+                          <a onclick="c2()" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                      </div>
+                      <div class="card col-sm-4" style="width:340px">
+                        <img class="card-img-top" src="https://static.wikia.nocookie.net/valorant/images/0/08/Spline_Operator.png/revision/latest?cb=20230711205218" alt="operator" style="width:100%">
+                        <div class="card-body">
+                          <h4 class="card-title">SPLINE | OPERATOR</h4>
+                          <br>
+                          <h5 class="card-body">V.₱ 2800</h5>
+                          <a onclick="c3()" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="row">
+                        <div class="card col-sm-4 me-3" style="width:340px">
+                          <img class="card-img-top" src="https://static.wikia.nocookie.net/valorant/images/a/a2/Neo_Frontier_Marshal.png/revision/latest?cb=20230711201453" alt="marshal" style="width:100%">
+                          <div class="card-body">
+                            <h4 class="card-title">NEO FRONTIER | MARSHAL</h4>
+                            <br>
+                            <h5 class="card-body">V.₱ 2900</h5>
+                            <a onclick="c4()" class="btn btn-primary">Add to Cart</a>
+                          </div>
+                        </div>
+                        <div class="card col-sm-4 me-3" style="width:340px">
+                          <img class="card-img-top" src="https://static.wikia.nocookie.net/valorant/images/e/e4/Glitchpop_Operator.png/revision/latest?cb=20230711194941" alt="operator" style="width:100%">
+                          <div class="card-body">
+                            <h4 class="card-title">Glitchpop | OPERATOR</h4>
+                            <br>
+                            <h5 class="card-body">V.₱ 3000</h5>
+                            <a onclick="c5()" class="btn btn-primary">Add to Cart</a>
+                          </div>
+                        </div>
+                        <h1 class="text-center1">B L A C K M A R K E T - M E L E E</h1>
+                      <div class="card col-sm-4 me-3" style="width:340px">
+                        <img class="card-img-top" src="https://static.wikia.nocookie.net/valorant/images/9/95/XER%C3%98FANG_Knife.png/revision/latest?cb=20240206163518" alt="knife" style="width:100%">
+                        <div class="card-body">
+                          <h4 class="card-title">XERØFANG | MELEE</h4>
+                          <br>
+                          <h5 class="card-body">V.₱ 2600</h5>
+                          <a onclick="c1()" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                      </div>
+                      <div class="card col-sm-4 me-3" style="width:340px">
+                        <img class="card-img-top" src="https://static.wikia.nocookie.net/valorant/images/d/d6/Onimaru_Kunitsuna.png/revision/latest?cb=20240416151848" alt="knife" style="width:100%">
+                        <div class="card-body">
+                          <h4 class="card-title">ONIMARU KUNITSUNA | MELEE</h4>
+                          <br>
+                          <h5 class="card-body">V.₱ 2700</h5>
+                          <a onclick="c2()" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                      </div>
+                      <div class="card col-sm-4" style="width:340px">
+                        <img class="card-img-top" src="https://static.wikia.nocookie.net/valorant/images/b/b8/Spline_Dagger.png/revision/latest?cb=20230711205203" alt="knife" style="width:100%">
+                        <div class="card-body">
+                          <h4 class="card-title">SPLINE | MELEE</h4>
+                          <br>
+                          <h5 class="card-body">V.₱ 2800</h5>
+                          <a onclick="c3()" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="row">
+                        <div class="card col-sm-4 me-3" style="width:340px">
+                          <img class="card-img-top" src="https://static.wikia.nocookie.net/valorant/images/2/21/Kuronami_no_Yaiba.png/revision/latest?cb=20240109154313" alt="knife" style="width:100%">
+                          <div class="card-body">
+                            <h4 class="card-title">KURONAMI NO YAIBA | MELEE</h4>
+                            <br>
+                            <h5 class="card-body">V.₱ 2900</h5>
+                            <a onclick="c4()" class="btn btn-primary">Add to Cart</a>
+                          </div>
+                        </div>
+                        <div class="card col-sm-4 me-3" style="width:340px">
+                          <img class="card-img-top" src="https://static.wikia.nocookie.net/valorant/images/a/a9/Elderflame_Dagger.png/revision/latest?cb=20230711194154" alt="knife" style="width:100%">
+                          <div class="card-body">
+                            <h4 class="card-title">ELDERFLAME | MELEE</h4>
+                            <br>
+                            <h5 class="card-body">V.₱ 3000</h5>
+                            <a onclick="c5()" class="btn btn-primary">Add to Cart</a>
+                          </div>
+                        </div>
+                </div>      
+              </div>
+          <div class="row">
+            <form>
+              <div>
+                <h1 class="text-center2 fw-bold mb-3">Cart</h1>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Items</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="karto">
+                    </tbody>
+                </table>
+            </div>
+            <div>
+              <table class="table">
+                <thead>
+                  <tr>
+                      <th scope="col">Total:</th>
+                      <th scope="col" id="total">0.00 Valorant Points</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
+              <label for="cust_name" class="form-check-label fw-bold">Name:</label>
+              <input type="text" name="cust_name" id="cust_name" placeholder="Enter your name" class="form-control">
+              <label for="cust_addr" class="form-check-label fw-bold">Address:</label>
+              <input type="text" name="cust_addr" id="cust_addr" placeholder="Enter your delivery address" class="form-control">
+              <label for="cust_email" class="form-check-label fw-bold">Email:</label>
+              <input type="email" name="cust_email" id="cust_email" placeholder="Enter your email" class="form-control">
+              <input type="hidden" name="cust_order" id="cust_order">
+              <div class="mt-2">
+              <input type="submit" class="btn btn-dark" formaction="http://sirjm.infinityfreeapp.com/checkout.php">
+              </div>
+            </form>
+          </div>
+        </div>
+        </div>
+    </body>
+  </html>
