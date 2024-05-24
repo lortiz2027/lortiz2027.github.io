@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,600;1,600&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f6f6f6;
+        }
+        header {
+            background-color: #3e352b;
+            color: #f6f6f6;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            display: inline-block;
+            font-family: "Oswald", sans-serif;
+            font-weight: 350;
+            font-style: normal;
+        }
+        nav a {
+            color: #f6f6f6;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 15px;
+            margin-bottom: 10%;
+        }
+        footer {
+            background-color: #3e352b;
+            color: #f6f6f6;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .developer-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #3e352b;
+            color: #f6f6f6;
+            padding: 20px;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+        .developer-popup p {
+            margin: 0;
+        }
+        .developer-name {
+            cursor: pointer;
+            color: blue;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .developer-name {
+        height: 300px;
+        }
+        .developer-name img {
+            transition: transform .5s ease;
+            border-radius: 4%;
+        }
+        .developer-name:hover img {
+            transform: scale(1.5);
+        }
+        .developer {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            padding: 2%;
+            padding-bottom: 7%;
+            animation: fadeIn 5s;
+            flex-wrap: wrap;
+        }
+        .developer p {
+            font-size: 30px;
+        }
+        h2 {
+            font-size: 30px;
+            color: #5a4b3f;
+            font-family: "Oswald", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+        }
+        h1 {
+            font-size: 50px;
+            font-family: "EB Garamond", serif;
+            font-weight: 600;
+            font-style: normal;
+        }
+        h4 {
+            font-size: 30px;
+            font-family: "Oswald", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+        }
+        .developer p {
+            font-family: "Oswald", sans-serif;
+            font-weight: 200;
+            font-style: normal;
+        }
+        .references p {
+            font-size: 20px;
+            font-family: "Oswald", sans-serif;
+            font-weight: 200;
+            font-style: normal;
+        }
+        .references {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            }
+
+        .box {
+            width: 300px;
+            height: 500px;
+            background-color: #e0e0e0;
+            margin: 10px;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>About The Company</h1>
+    <nav>
+        <a href="index.html">Shop</a>
+        <a href="#developer">About the Developers</a>
+        <a href="#references">References</a>
+    </nav>
+</header>
+
+<main>
+    <h2>The Developers and their Contributions</h2>
+    <div class="developer" id="developer">
+        <div class="developer-name">
+            <img src="Liam.png" alt="Liam Cortez">
+        </div>
+        <div class="developer-popup">
+            <p>Liam created the About the Company page.</p>
+        </div>
+
+        <div class="developer-name">
+            <img src="Jm.png" alt="Jm Sangalang">
+        </div>
+        <div class="developer-popup">
+            <p>Jm created the code for the shopping page.</p>
+        </div>
+
+        <div class="developer-name">
+            <img src="Dexter.png" alt="Dexter Galiga">
+        </div>
+        <div class="developer-popup">
+            <p>Dexter made the designs of the shopping page.</p>
+        </div>
+    </div>
+
+    <h2 id="references">References</h2>
+    <div class="references">
+        <div class="box">
+            <h4>Technology</h4>
+            <p>"Nerve Gear" - Sword Art online</p>
+            <p>"Pokeball" - Pokemon</p>
+            <p>"ODM Gear" - Attack On Titan</p>
+            <p>"Digimon" - Digimon</p>
+            <p>"Doraemon" - Doraemon</p>
+            <p>"Dragon Ball" - Dragon Ball Z</p>
+        </div>
+        <div class="box">
+            <h4>Food</h4>
+            <p>"Cursed Finger" - Jujutsu Kaisen</p>
+            <p>"All Might's Hair" - My Hero Academia</p>
+            <p>"Naruto Ramen" - Naruto</p>
+            <p>"Mitarashi Dango" - Demon Slayer</p>
+            <p>"Takoyaki" - Dragon Ball Z</p>
+            <p>"Onigiri" - Demon Slayer</p>
+        </div>
+        <div class="box">
+            <h4>Accessories</h4>
+            <p>"Luffy's Hat" - One Piece</p>
+            <p>"Tajiro's Earrings" - Demon Slayer</p>
+            <p>"Kaneki's Mask" - Tokyo Ghoul</p>
+            <p>"Mikasa's Scarf" - Attack On Titan</p>
+            <p>"Gaara's Bag" - Naruto</p>
+            <p>"Itachi's Headband" - Naruto</p>
+        </div>
+        <div class="box">
+            <h4>Clothing</h4>
+            <p>"Karasuno's Jersey" - Haikyuu</p>
+            <p>"Akatsuki's Uniform" - Naruto</p>
+            <p>"Scout's Cape" - Attack On Titan</p>
+            <p>"Kimono" - Demon Slayer</p>
+            <p>"Cloak" - Assassination Classroom</p>
+            <p>"Sukuna's Robe" - Jujutsu Kaisen</p>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Our Company. All rights reserved.</p>
+</footer>
+
+<script>
+    const developerNames = document.querySelectorAll('.developer-name');
+
+    developerNames.forEach(name => {
+        name.addEventListener('click', () => {
+            const popup = name.nextElementSibling;
+            popup.style.display = 'block';
+
+            window.addEventListener('click', (e) => {
+                if (!popup.contains(e.target) && !name.contains(e.target)) {
+                    popup.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
