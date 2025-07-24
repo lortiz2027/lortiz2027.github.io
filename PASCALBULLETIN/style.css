@@ -30,10 +30,16 @@
     align-items: center;
 }
 
+.intro_img img{
+    width: 300px;
+    animation: floatImage 4s ease-in-out infinite;
+
+}
 .home_img img{
     width: 35vw;
     animation: floatImage 4s ease-in-out infinite;
 }
+
 
 .navbar a:hover,
 .navbar a.active {
