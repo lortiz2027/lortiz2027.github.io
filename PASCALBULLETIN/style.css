@@ -31,8 +31,13 @@
 }
 
 .intro_img img{
-    width: 5vw;
+    width: 60vw;
     animation: floatImage 4s ease-in-out infinite;
+
+}
+
+.sched_img img{
+    width: 90vw;
 
 }
 .home_img img{
@@ -165,10 +170,10 @@ span{
     height: 4rem;
     background: transparent;
     border: .2rem solid var(--green);
-    border-radius: 50%;
+    border-radius: 80%;
     font-size: 2rem;
     color: var(--green);
-    margin: 3rem 1.5rem 3rem 0;
+    margin: -2rem 1.5rem 3rem 0;
     transition: .5s ease;
 }
 
@@ -251,6 +256,8 @@ span{
     color: var(--green);
 }
 
+
+
 .hobbies_box p{
     font-family: 'Arvo';
     font-size: 1.6rem;
@@ -267,6 +274,17 @@ span{
     border: .2rem solid var(--black);
     transition: .5s ease;
 }
+
+.schedule_container .schedule_box{
+    flex: 1 1 30rem;
+    padding: 0rem 0rem 0rem;
+    border-radius: 3rem;
+    text-align: center;
+    border: .8rem solid var(--black);
+    transition: .5s ease;
+}
+
+
 
 .hobbies_container .hobbies_box:hover{
     border-color: var(--green);
@@ -449,4 +467,11 @@ span{
     .about_img img{
         width: 90vw;
     }
+}
+
+
+div#hobbies_box {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
