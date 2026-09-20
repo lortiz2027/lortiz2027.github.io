@@ -1,0 +1,660 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=League+Spartan:wght@700&family=Lilita+One&family=Poppins&display=swap');
+* 
+
+{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--green);
+}
+
+#menu {
+    font-size: 3.6rem;
+    color: var(--white);
+    display: none;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_img img{
+    width: 35vw;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--green);
+}
+
+#menu {
+    font-size: 3.6rem;
+    color: var(--white);
+    display: none;
+}
+
+
+.home_img img{
+    width: 35vw;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+:root {
+    --black: #1f242d;
+    --gray: #444444;
+    --white: #fff;
+    --red: #c20000;
+    --green: rgb(221, 15, 32)
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: url('images/BACKGROUND.png') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--white);
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    will-change: transform;
+}
+
+
+.header.sticky{
+    border-bottom: .1rem solid rgba(0,0,0,.2);
+}
+
+.name {
+    font-size: 2.5rem;
+    color: var(--white);
+    font-weight: 600;
+    cursor: default;
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--white);
+    margin-left: 4rem;
+    transition: .3s;
+}
+
+
+@keyframes floatImage{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-2.4rem);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+.home_content h3{
+    font-family: 'League Spartan';
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+
+.home_contenth3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+
+span{
+    font-family: 'League Spartan';
+    color: var(--green);
+}
+
+.home_content h1{
+    font-family: 'Lilita One';
+    font-size: 5.6rem;
+    font-weight: 300;
+    line-height: 1.3;
+    color: var(--red);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.home_content p {
+    font-size: 1.5rem;
+}
+
+.tasks {
+    min-height: 100vh;
+}
+
+.tasks .heading {
+    font-family: 'League Spartan';
+    margin-bottom: 5rem;
+}
+
+.tasks_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.task_box {
+    width: 100%;
+    background: rgba(31, 36, 45, 0.92);;
+    padding: 3rem;
+    border-radius: 1.5rem;
+    border-left: .6rem solid var(--green);
+    transition: .4s ease;
+}
+
+.task_box:hover {
+    transform: translateX(1rem);
+    box-shadow: 0 0 2rem rgba(221, 15, 32, 0.3);
+}
+
+.task_box h3 {
+    font-family: 'League Spartan';
+    font-size: 2.8rem;
+    color: var(--green);
+    margin-bottom: 1rem;
+}
+
+.task_box p {
+
+    font-size: 1.6rem;
+    color: var(--white);
+}
+
+.task_box .members {
+    margin-top: 1.5rem;
+}
+
+.accounts a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--green);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--green);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.accounts a:hover {
+    background: var(--green);
+    color: var(--gray);
+    box-shadow: 0 0 1rem var(--green);
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.btn{
+    font-family: 'League Spartan';
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--green);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--green);
+    font-size: 1.6rem;
+    color: var(--gray);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: 0.5s ease;
+}
+
+.btn:hover{
+    box-shadow: none;
+}
+
+
+.about_img img{
+    width: 65vw;
+    animation: floatImage 15s ease-in-out infinite;
+}
+
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+}
+.about_content p{
+    font-family: 'Arvo';
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+.reference i {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 1.6rem !important;
+    color: var(--white) !important;
+    font-weight: 400 !important;
+}
+
+.about_content h2{
+    font-family: 'League Spartan';
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about_content h3{
+    font-family: 'League Spartan';
+    font-size: 2.6rem;
+}
+
+
+.hobbies h2{
+    font-family: 'League Spartan';
+    margin-bottom: 5rem;
+}
+
+.about h2{
+    font-family: 'League Spartan';
+    margin-bottom: 5rem;
+}
+
+
+
+.hobbies_box p {
+    font-family: 'Arvo';
+    font-size: 1.6rem;
+    line-height: 1.7;
+    margin: 1.5rem 0 0;
+}
+
+.hobbies_box a:not(.btn) {
+    color: var(--green);    
+}
+
+.about a:not(.btn) {
+    color: var(--green);    
+}
+
+.hobbies_box .reference {
+    text-align: left;
+}
+
+.hobbies_box a:not(.btn):hover {
+    color: var(--white);
+}
+
+
+.hobbies_box .btn {
+    font-family: 'League Spartan';
+    display: inline-block;
+
+    padding: 1rem 2rem;
+
+    background: var(--green);
+    border-radius: .8rem;
+
+    font-size: 1.8rem;
+    color: var(--white);
+
+    box-shadow: none;
+
+    cursor: default;
+}
+
+
+.hobbies_container .hobbies_box:hover {
+    transform: translateX(1rem);
+    box-shadow: 0 0 2rem rgba(221, 15, 32, 0.3);
+}
+
+
+.hobbies_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.hobbies_container .hobbies_box {
+    width: 85%;
+    background: rgba(31, 36, 45, 0.92);
+    padding: 3.5rem;
+    border-radius: 1.5rem;
+    text-align: left;
+    border-left: .6rem solid var(--green);
+    transition: .4s ease;
+}
+
+@media (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px){
+    .header{
+        padding: 2rem 3%;
+    }
+
+    section{
+        padding: 10rem 3% 2rem;
+    }
+
+  .hobbies {
+    background: transparent;
+    min-height: 100vh;
+    padding: 12rem 9% 6rem;
+}
+
+
+}
+
+@media (max-width: 768px){
+    #menu {
+        display: block;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--black);
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+        display: none;
+    }
+
+    .navbar.active{
+        display: block;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home{
+        flex-direction: column;
+    }
+
+    .home_content h3{
+        font-size: 2.6rem;
+    }
+
+    .home_content h1{
+        font-size: 5rem;
+        color: var(--red);
+    }
+
+    .home_img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .about{
+        flex-direction: column;
+    }
+
+
+    .hobbies h2{
+        margin-bottom: 3rem;
+    }
+
+}
+
+
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 365px){
+    .home_img img{
+        width: 90vw;
+    }
+    
+}
+
+.analysis {
+    min-height: 100vh;
+    padding: 12rem 9% 6rem;
+    background: transparent;
+}
+
+.analysis .heading {
+    font-family: 'League Spartan';
+    margin-bottom: 5rem;
+}
+
+.summary_box {
+    position: relative;
+    width: 85%;
+    min-height: 35rem;
+    margin: 0 auto 5rem;
+    padding: 5rem 8rem;
+
+    background: rgba(31, 36, 45, 0.92);
+    border-radius: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.summary_content {
+    width: 100%;
+    text-align: center;
+}
+
+.summary_slide {
+    display: none;
+    animation: fadeSlide .5s ease;
+}
+
+.summary_slide.active {
+    display: block;
+}
+
+.summary_slide h3 {
+    font-family: 'League Spartan';
+    font-size: 3.5rem;
+    color: var(--green);
+    margin-bottom: 1rem;
+}
+
+.summary_slide h4 {
+    font-family: 'League Spartan';
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.summary_slide p {
+    font-family: 'Arvo';
+    font-size: 1.6rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+
+/* ARROW BUTTONS */
+
+.carousel_btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 4.5rem;
+    height: 4.5rem;
+
+    border-radius: 50%;
+    background: var(--green);
+    color: var(--white);
+
+    font-size: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.carousel_btn:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 0 1.5rem var(--green);
+}
+
+.carousel_btn.prev {
+    left: 2rem;
+}
+
+.carousel_btn.next {
+    right: 2rem;
+}
+
+
+/* DOTS */
+
+.carousel_dots {
+    position: absolute;
+    bottom: 1.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 1rem;
+}
+
+.dot {
+    width: 1rem;
+    height: 1rem;
+    background: var(--white);
+    border-radius: 50%;
+    opacity: .4;
+    transition: .3s ease;
+}
+
+.dot.active {
+    background: var(--green);
+    opacity: 1;
+}
+
+
+/* =========================
+   NORMAL ANALYSIS BOXES
+========================= */
+
+.analysis_container {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.analysis_box {
+    background: rgba(31, 36, 45, 0.92);
+    padding: 3rem;
+    border-radius: 1.5rem;
+    border-left: .6rem solid var(--green);
+    transition: .4s ease;
+}
+
+.analysis_box:hover {
+    transform: translateX(1rem);
+    box-shadow: 0 0 2rem rgba(221, 15, 32, 0.3);
+}
+
+.analysis_box h3 {
+    font-family: 'League Spartan';
+    font-size: 2.8rem;
+    color: var(--green);
+    margin-bottom: 1.5rem;
+}
+
+.analysis_box p {
+    font-family: 'Arvo';
+    font-size: 1.6rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.analysis_box a:not(.btn) {
+    color: var(--green);    
+}
+
+.analysis_box a:not(.btn):hover {
+    color: var(--white);
+}
+
+.analysis_box .btn {
+    font-family: 'League Spartan';
+    display: inline-block;
+
+    padding: 1rem 2rem;
+
+    background: var(--green);
+    border-radius: .8rem;
+
+    font-size: 1.8rem;
+    color: var(--white);
+
+    box-shadow: none;
+
+    cursor: default;
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateX(2rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
