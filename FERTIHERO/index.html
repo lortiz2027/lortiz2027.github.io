@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FERTI-HERO Smart Soil Monitoring Device">
+  <title>FERTI-HERO | Smart Soil Monitoring</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-bg"></div>
+
+  <header class="navbar" id="navbar">
+    <a class="brand" href="#home" aria-label="FERTI-HERO home">
+      <img src="images/logo.png" alt="FERTI-HERO Logo" class="brand-logo">
+      <span>FERTI-HERO</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="active">Home</a>
+      <a href="#results">Results</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <a href="#results" class="nav-button">View Results <span>↗</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="pulse"></span> CINENSE, MARTIN, ORTIZ</div>
+        <h1>NPK<br><em>MONITORING DEVICE</em></h1>
+        <p class="hero-text">
+          FERTI-HERO measures soil nutrients and turns NPK readings into
+          clear, data-driven fertilizer recommendations for rice production.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#results" class="primary-btn">View Soil Results <span>→</span></a>
+          <a href="#about" class="text-btn">Learn about FERTI-HERO</a>
+        </div>
+
+        <div class="hero-stats">
+          <div><strong>N</strong><span>Nitrogen</span></div>
+          <div><strong>P</strong><span>Phosphorus</span></div>
+          <div><strong>K</strong><span>Potassium</span></div>
+        </div>
+      </div>
+
+          <div class="device-stage reveal">
+        <div class="glow"></div>
+
+        <img 
+            src="images/fertihero.png" 
+            alt="FERTI-HERO Soil Monitoring Device"
+            class="fertihero-photo"
+        >
+
+        <div class="floating-chip chip-one">
+            REAL-TIME <b>DATA</b>
+        </div>
+
+        <div class="floating-chip chip-two">
+            NPK <b>LIVE</b>
+        </div>
+    </div>
+    </section>
+
+    <section class="quick-strip">
+      <div><span class="strip-icon">01</span><p><b>Measure</b><br>Collect soil NPK data</p></div>
+      <div><span class="strip-icon">02</span><p><b>Analyze</b><br>Compare readings with targets</p></div>
+      <div><span class="strip-icon">03</span><p><b>Recommend</b><br>Get a fertilizer guide</p></div>
+    </section>
+
+    <section class="section results-section" id="results">
+      <div class="section-heading reveal">
+        <div>
+          <div class="eyebrow">LIVE DASHBOARD</div>
+          <h2>Soil <em>results</em></h2>
+        </div>
+        <div class="reading-status"><span class="status-dot"></span> Device connected</div>
+      </div>
+
+      <div class="dashboard">
+        <div class="reading-panel panel">
+          <div class="panel-head">
+            <div>
+              <span class="panel-kicker">LATEST READING</span>
+              <h3>NPK concentration</h3>
+            </div>
+            <span class="timestamp" id="timestamp">Waiting for data</span>
+          </div>
+
+          <div class="nutrient-grid">
+            <article class="nutrient nitrogen">
+              <div class="nutrient-symbol">N</div>
+              <div><span>NITROGEN</span><strong id="nValue">--</strong><small>mg/kg</small></div>
+            </article>
+            <article class="nutrient phosphorus">
+              <div class="nutrient-symbol">P</div>
+              <div><span>PHOSPHORUS</span><strong id="pValue">--</strong><small>mg/kg</small></div>
+            </article>
+            <article class="nutrient potassium">
+              <div class="nutrient-symbol">K</div>
+              <div><span>POTASSIUM</span><strong id="kValue">--</strong><small>mg/kg</small></div>
+            </article>
+          </div>
+
+          <div class="reading-footer">
+            <span><i class="mini-dot"></i> RS485 sensor</span>
+            <span>Auto-refresh <b>ON</b></span>
+          </div>
+        </div>
+
+        <aside class="recommendation-panel panel">
+          <span class="panel-kicker">FERTILIZER GUIDE</span>
+          <h3>Recommendation</h3>
+          <p id="recommendationText">Waiting for a soil reading.</p>
+
+          <div class="target-box target-editor">
+            <div class="target-title-row">
+              <span>Target NPK</span>
+              <small>Set your desired nutrient levels</small>
+            </div>
+            <div class="target-inputs">
+              <label>
+                <span>N</span>
+                <input id="targetN" type="number" min="0" step="0.1" value="18" aria-label="Target nitrogen">
+              </label>
+              <label>
+                <span>P</span>
+                <input id="targetP" type="number" min="0" step="0.1" value="18" aria-label="Target phosphorus">
+              </label>
+              <label>
+                <span>K</span>
+                <input id="targetK" type="number" min="0" step="0.1" value="18" aria-label="Target potassium">
+              </label>
+            </div>
+            <button class="set-target-btn" id="setTargetBtn">Set Target NPK</button>
+            <strong class="target-display" id="targetValue">18 — 18 — 18</strong>
+          </div>
+
+          <div class="recommendation-action">
+            <span>Recommended adjustment</span>
+            <strong id="adjustmentValue">--</strong>
+          </div>
+          <br>
+          <button class="outline-btn" id="demoBtn">Load Soil Reading <span>↗</span></button>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="about-visual reveal">
+        <div class="about-number">NPK<span>01</span></div>
+        <div class="orbit orbit-a"></div>
+        <div class="orbit orbit-b"></div>
+        <div class="about-core"><img src="images/logo.png" alt="FERTI-HERO Logo" class="brand-logo"></div>
+      </div>
+
+      <div class="about-copy reveal">
+        <div class="eyebrow">BUILT FOR BETTER DECISIONS</div>
+        <h2>From a soil reading<br>to a <em>clear action.</em></h2>
+        <p>
+          FERTI-HERO is a smart soil monitoring concept designed to make
+          nutrient information easier to understand and use. Instead of
+          showing raw measurements alone, the system connects readings with
+          target nutrient levels to support fertilizer planning.
+        </p>
+
+        <div class="feature-list">
+          <div><span>✓</span><div><b>Real-time NPK monitoring</b><small>Track nitrogen, phosphorus, and potassium readings.</small></div></div>
+          <div><span>✓</span><div><b>Data-driven recommendations</b><small>Translate measurements into practical fertilizer guidance.</small></div></div>
+          <div><span>✓</span><div><b>Connected monitoring</b><small>Designed for remote data viewing and future field deployment.</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div>
+        <span class="eyebrow">FERTI-HERO</span>
+        <h2>Measure better.<br><em>Grow smarter.</em></h2>
+      </div>
+      <a href="#results" class="primary-btn">Open Dashboard <span>→</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand"> <img src="images/logo.png" alt="FERTI-HERO Logo" class="brand-logo"><span>FERTI-HERO</span></div>
+    <p>Smart soil monitoring for data-driven fertilizer recommendations.</p>
+    <span>© 2026 FERTI-HERO</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
